@@ -1,4 +1,4 @@
-// var moment = require('moment');
+var moment = require('moment');
 
 var Alarm = function(alarmTime) {
   this.alarmTime = alarmTime;
