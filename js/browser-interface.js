@@ -1,3 +1,5 @@
+var Alarm = require('./../js/alarm.js').Alarm;
+
 $(document).ready(function() {
   $('#alarmTimeEntry').submit(function(event) {
     event.preventDefault();
