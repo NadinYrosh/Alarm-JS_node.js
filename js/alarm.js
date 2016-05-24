@@ -1,8 +1,6 @@
-var moment = require('moment');
-
 var Alarm = function(alarmTime) {
   this.alarmTime = alarmTime;
-  this.momentTime = moment().format('LT');
+  this.momentTime = moment().format('LTS');
 };
 
 Alarm.prototype.currentTime = function() {

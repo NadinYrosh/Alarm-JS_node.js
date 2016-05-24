@@ -2,7 +2,11 @@
 <html>
   <head>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Alarm Clock</title>
   </head>
@@ -14,8 +18,8 @@
     <form id="alarmTimeEntry">
       <label for="setAlarmClock">Set the alarm: </label>
       <input id="setAlarmClock" type="time">
-      <button id="setAlarm" type="submit">Set Alarm!</button>
-      <button id="stopAlarm" type="submit">Stop Alarm!</button>
+      <button id="setAlarm" class="btn-success" type="submit">Set Alarm!</button>
+      <button id="stopAlarm" class="btn-danger" type="submit">Stop Alarm!</button>
     </form>
     <h3 id="alarmSetTime"></h3>
   </body>
