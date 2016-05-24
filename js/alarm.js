@@ -1,16 +1,27 @@
 var Alarm = function(alarmTime) {
   this.alarmTime = alarmTime;
-  this.momentTime = moment().format('LTS');
 };
 
-Alarm.prototype.currentTime = function() {
-  this.displayCurrentTime = "The current time is: " + this.momentTime;
-  return this.displayCurrentTime;
+// Alarm.prototype.check = function() {
+//   if (this.alarmTime === moment().format('H:mm')){
+//     alert("Get up!");
+//   } else {
+//     return false;
+//   }
+// };
+
+Alarm.prototype.check = function() {
+  console.log(this.alarmTime);
+  var self = this;
+  setInterval(function() {
+    console.log(self.alarmTime);
+    if (self.alarmTime === moment().format('H:mm')){
+      alert("Get up!");
+    } else {
+      return false;
+    }
+  }, 1000);
 };
 
-Alarm.prototype.entry = function() {
-  this.alarmSetTime = "The alarm is set to: " + this.alarmTime;
-  return this.alarmSetTime;
-};
 
 exports.Alarm = Alarm;
